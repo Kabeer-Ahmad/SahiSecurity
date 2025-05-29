@@ -1,0 +1,379 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    min-height: 100%;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+}
+
+.loading-content {
+    text-align: center;
+    color: #333;
+}
+
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Add this line to ensure full height */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #ff0000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 40%;
+    height: 70px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #000000;
+    color: #ff0000;
+    padding: 0.5em;
+    text-align: center;
+}
+nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+    transition: color 0.7s ease;
+
+}
+main {
+    padding: 1em;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.banner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(0); /* Initial position */
+    transition: transform 1s, opacity 1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.banner img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+article {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+article img {
+    width: 100%; /* Make the image responsive within its container */
+    max-width: 600px;
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 8px; /* Add rounded corners to the image */
+    margin-bottom: 10px; /* Add some space below the image */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: underline;
+    color: #0255ae;
+    transition: background-color 0.5s ease;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff0000;
+    transition: background-color 0.5s ease;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+    p{
+        font-size: 14px;
+
+    }
+}
+
+/* Add this to your existing CSS */
+
+.learn-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000; /* Green color, you can change it */
+    color: #f50303;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
+    background-color: #be0000; /* Darker green color on hover, you can change it */
+    color: #000000;
+}
+
+.contact-options {
+    margin-top: 10px; /* Adjust the spacing between the logo and contact options */
+    clear: both; /* Clear the float to prevent overlapping */
+}
+
+.contact-options p {
+    margin: 5px 0;
+}
+
+.contact-options a {
+    color: #3498db; /* Blue color */
+    text-decoration: none; /* Remove underline */
+}
+
+h3{
+    margin: 0px;
+}
+
+nav a.active {
+    color: #ff0000; /* Red color for the active link */
+    text-decoration: underline;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card  p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.service-card  h3 {
+    color: #d40000;
+    margin-bottom: 10px;
+}
+.services-container  h2 {
+    color: #333;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 0px;
+}
+
+section {
+    padding: 1em;
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-buttons a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.whatsapp {
+    background-color: #18c357; /* WhatsApp green */
+    color: #fff;
+}
+
+.call {
+    background-color: #1d82c5; /* Call blue */
+    color: #fff;
+}
+
+.email {
+    background-color: #de1e09; /* Email red */
+    color: #fff;
+}
+
+.contact-buttons a:hover {
+    background-color: #000000;
+}
+
+.contact-buttons i {
+    margin-right: 10px;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+}
+
+.review {
+    font-style: italic;
+}
+
+.name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.location {
+    color: #777;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control {
+    background-color: #000000;
+    color: #ff0000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.control:hover {
+    background-color: #555;
+}
+
+.banner_carousal {
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(0) scale(1) rotate(0deg); /* Initial position */
+    animation: rotateZoom 5s linear infinite, fadeIn 1s ease 1s forwards; /* Add the infinite loop */
+}
+
+.banner_carousal img {
+    overflow: hidden;
+    width: 110%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transform-origin: center center;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateZoom {
+    0% {
+        transform: translateX(-100%) scale(1) rotate(0deg);
+    }
+    100% {
+        transform: translateX(90%) scale(1) rotate(0deg);
+    }
+}
